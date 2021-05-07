@@ -6,19 +6,9 @@ import {nanoid} from "nanoid"
 
 function MovieApplication() {
     const [movieList, setMovieList] = useState([])
-    const [error, setError] = useState("")
 
     const addMovie = (title, grade) => {
-        if(title === "") {
-            setError("Du måste ange en titel")
-            return
-        }
-        if(grade === "") {
-            setError("Du måste ange ett betyg")
-            return
-        }
         setMovieList(oldList => [...oldList, {id: nanoid(), title: title, grade: grade}])
-        setError("")
     }
 
     const removeMovie = (targetId) => {
@@ -26,9 +16,9 @@ function MovieApplication() {
     }
 
     return (
-        <div>
+        <div className="container">
             <MovieAppHeader />
-            <MovieForm addMovie={addMovie} errorMessage={error} />
+            <MovieForm addMovie={addMovie} />
             <MovieList movies={movieList} removeMovie={removeMovie} />
         </div>  
     )

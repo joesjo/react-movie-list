@@ -1,12 +1,91 @@
 * {
     box-sizing: border-box;
+    color: var(--text-color)
 }
 
 :root {
+    --page-background: #111;
+    --border-color: #777;
+    --container-background: #222;
+    --text-color: #ccc;
+    --small-screen: 800px;
     font-size: 20px;
 }
 
 body {
     font-family: sans-serif;
     margin: 0;
+    background-color: var(--page-background);
+}
+
+.container {
+    background-color: var(--container-background);
+    max-width: var(--small-screen);
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+
+hr {
+    border: 1px solid var(--border-color);
+}
+
+.header-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-div h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.header-div h3 {
+    margin: 0;
+    margin-bottom: 0.4rem;
+}
+
+.header-div hr {
+    margin: 0;
+    margin-bottom: 0.4rem;
+}
+
+.form-div form {
+    display: flex;
+}
+
+.form-div input {
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--page-background);
+    border: 1px solid var(--border-color);
+    padding: 4px;
+}
+
+.form-div select {
+    background-color: var(--page-background);
+    border-left: none;
+}
+
+.form-div button {
+    width: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: var(--page-background);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.form-div span {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
 }

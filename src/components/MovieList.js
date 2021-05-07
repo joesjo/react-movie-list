@@ -2,7 +2,7 @@ import Movie from "./Movie"
 
 function MovieList (props) {
     return (
-        <div>
+        <div className="movieList">
             {props.movies.map(movie => (
                 <Movie 
                     id={movie.id} 
