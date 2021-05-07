@@ -1,6 +1,7 @@
-import MovieAppHeader from "./MovieAppHeader.js"
+import MovieAppHeader from "./MovieAppHeader"
 import MovieForm from "./MovieForm"
 import MovieList from "./MovieList"
+import MovieSorting from "./MovieSorting"
 import {useState, useEffect} from "react"
 import {nanoid} from "nanoid"
 
@@ -15,15 +16,24 @@ function MovieApplication() {
         setMovieList(oldList => oldList.filter(movie => movie.id !== targetId))
     }
 
+    const alphabeticSort = () => {
+        setMovieList(oldList => [...oldList.sort((a, b) => (a.title > b.title) ? 1 : -1)])
+    }
+
+    const gradeSort = () => {
+        setMovieList(oldList => [...oldList.sort((a, b) => (a.grade < b.grade) ? 1 : -1)])
+    }
+
     useEffect(() => {
         localStorage.setItem("movies", JSON.stringify(movieList))
     }, [movieList])
 
     return (
-        <div className="container" style={movieList.length > 0 ? {paddingBottom:"0"} : {}}>
+        <div className="container">
             <MovieAppHeader />
             <MovieForm addMovie={addMovie} />
             <MovieList movies={movieList} removeMovie={removeMovie} />
+            <MovieSorting alphabeticSort={alphabeticSort} gradeSort={gradeSort}/>
         </div>  
     )
 }

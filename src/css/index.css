@@ -130,6 +130,28 @@ hr {
     align-items: center;
 }
 
+.sort-buttons {
+    margin-top: 1rem;
+}
+
+.sort-buttons button {
+    height: 1.5rem;
+    background-color: var(--page-background);
+    border: 1px solid var(--border-color);
+}
+
+.sort-buttons button:hover {
+    background-color: var(--container-background);
+}
+
+.sort-buttons button:active {
+    background-color: var(--border-color);
+}
+
+.sort-buttons #grade-sort {
+    margin-left: 1rem;
+}
+
 @media screen and (max-width: 800px) {
     .container {
         border-radius: 0;
