@@ -76,10 +76,42 @@ hr {
     background-color: var(--page-background);
     border: 1px solid var(--border-color);
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-div button:hover {
+    background-color: var(--container-background);
+}
+
+.form-div button:active {
+    background-color: var(--border-color);
 }
 
 .form-div span {
     margin-top: 1rem;
+}
+
+.movie {
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.movie:last-child {
+    border-bottom: none;
+}
+
+.movie .movie-delete {
+    cursor: pointer;
+}
+
+.movie .movie-delete:hover {
+    background-color: var(--border-color);
+}
+
+.movie .movie-delete:active {
+    background-color: var(--text-color)
 }
 
 @media screen and (max-width: 800px) {

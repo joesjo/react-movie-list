@@ -40,7 +40,6 @@ function MovieForm(props) {
                 <button onClick={submit}>Lägg till</button>
             </form>
             <span>{props.errorMessage}</span>
-            <hr />
         </div>
     )
 }
