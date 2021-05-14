@@ -5,7 +5,8 @@ function MovieList (props) {
         <div className="movieList">
             {props.movies.map(movie => (
                 <Movie 
-                    id={movie.id} 
+                    key={movie.id} 
+                    id={movie.id}
                     title={movie.title} 
                     grade={movie.grade} 
                     remove={props.removeMovie} 

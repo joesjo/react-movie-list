@@ -8,8 +8,8 @@ function Movie(props) {
                 {props.title}
             </h3>
             <div className="movie-end">
-                {[...Array(parseInt(props.grade))].map(() => <img class="movie-star" src={imgStar} alt="⭐" />)}
-                <img class="movie-delete" src={imgDelete} alt="❌" onClick={() => props.remove(props.id)} />
+                {[...Array(parseInt(props.grade))].map((e, i) => <img className="movie-star" key={i} src={imgStar} alt="⭐" />)}
+                <img className="movie-delete" src={imgDelete} alt="❌" onClick={() => props.remove(props.id)} />
             </div>
         </div>
     )
