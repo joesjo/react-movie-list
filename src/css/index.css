@@ -67,13 +67,12 @@ hr {
 
 .form-div select {
     background-color: var(--page-background);
-    border-left: none;
+    margin-left: 1rem;
 }
 
 .form-div button {
     width: 6rem;
     margin-left: 1rem;
-    margin-right: 1rem;
     background-color: var(--page-background);
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -102,7 +101,6 @@ hr {
     justify-content: space-between;
     background-color: var(--page-background);
     border: 1px solid var(--border-color);
-    border-radius: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
