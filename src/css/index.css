@@ -186,6 +186,7 @@ hr {
     .form-div select {
         border-left: 1px solid var(--border-color);
         width: 100%;
+        margin-left: 0;
     }
 
     .movie {
